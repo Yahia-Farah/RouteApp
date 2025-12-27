@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AndroidActivity"
+    tools:context=".DetailsActivity"
     android:background="@drawable/bg">
     <Toolbar
         android:layout_width="match_parent"
@@ -33,16 +33,18 @@
 
             >
             <ImageView
+                android:id="@+id/detailsImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/android"
+                tools:src="@drawable/ios"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
                 android:cropToPadding="true"/>
             <TextView
+                android:id="@+id/detailsTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/android_course_syllabus"
+                tools:text="@string/ios_syllabus"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="32sp"

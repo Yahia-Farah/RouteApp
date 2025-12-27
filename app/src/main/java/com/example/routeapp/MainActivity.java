@@ -23,15 +23,21 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonClick(View view){
         AppCompatButton button = (AppCompatButton) view;
         if(button.getText().toString().equals(ANDROID)){
-            Intent intent = new Intent(MainActivity.this, AndroidActivity.class);
+            Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+            intent.putExtra("course",R.drawable.android);
+            intent.putExtra("syllabus",R.string.android_course_syllabus);
             startActivity(intent);
         }
         else if (button.getText().toString().equals(IOS)){
-            Intent intent =new Intent(MainActivity.this,IosActivity.class);
+            Intent intent =new Intent(MainActivity.this,DetailsActivity.class);
+            intent.putExtra("course",R.drawable.ios);
+            intent.putExtra("syllabus",R.string.ios_syllabus);
             startActivity(intent);
         }
         else if (button.getText().toString().equals(FULLSTACK)){
-            Intent intent = new Intent(MainActivity.this,FullStackActivity.class);
+            Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+            intent.putExtra("course",R.drawable.fullstack);
+            intent.putExtra("syllabus",R.string.course_syllabus);
             startActivity(intent);
         }
     }
